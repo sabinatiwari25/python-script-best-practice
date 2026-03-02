@@ -10,13 +10,13 @@ n = int(sys.argv[1])
 if n < 1:
     sys.exit(sys.argv[0] + ": Expecting a positive integer")
 
-x = None
+smallest_prime_factor = None
 for i in range(2, n):
     if (n % i) == 0:
-        x = i
+        smallest_prime_factor = i
         break
 
-if x is None:
+if smallest_prime_factor is None:
     print(n)
 else:
-    print(x)
+    print(smallest_prime_factor)
